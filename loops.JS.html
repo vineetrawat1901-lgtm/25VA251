@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Loops in JS</title>
+</head>
+<body>
+  <script>
+    //for loop
+    let studentList = ["vikas", "vinay", "vivek", "deepak", "sneha", "shiva"];
+    for(let i=0; i<studentList.length; i++){
+      console.log(studentList[i]);
+    }
+    //while
+    let x=0;
+    while(x<studentList.length){
+      console.log(studentList[x]);
+      x++;
+    }
+    for(let y of studentList){
+      console.log(y);
+    }
+
+
+    let myInfo = {
+      name: "Vineet",
+      age: 19,
+      email: ";jahgbaj@gmail.com",
+      city: "ghaziabad"
+    }
+    for(let objKeys in myInfo){
+      console.log(myInfo[objKeys]);
+    }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     function demo(){
+//       console.log("hello js");
+//     }
+//     demo();
+
+//     function demo1(text ){
+//       console.log("hello " + text);
+//     }
+//     demo1("react");
+// // function with default parameter 
+//     function add (a, b=10){
+//       console.log("addition of two number is " + (a+b));
+//     }
+//     add (23, 23); 
+
+//     let cal = function (){
+//       var num1=5;
+//       var num2=10;
+//       var res=num1*num2;
+//       console.log("multiply of num1 and num2 "+ res);
+
+//     }
+//     cal();
+// // arrow function with multiline statement
+//     let div=(x,y)=>{
+//       var num1=x;
+//       var num2=y;
+//       var res=x/y;
+//       console.log("division is "+ res);
+//     }
+//     div(12,3);
+
+//     // arrow function with single line statement
+//     let msg=()=> console.log("hello abes");
+//     msg();
+
+
+//     function sub(callback){
+//     }
+//     function displayRes(){
+//       console.log("result is "+ res);
+//     }
+//     sub(displayRes);
+
+//     function msg1(){
+//       console.log("hello world");
+//     }
+//     setTimeout(msg1, 2000)
+
+    //IIFE-
+    (function (a,b){
+      console.log(`first parameter ${a} and 
+      second parameter ${b}`);
+      var res=a+b;
+      console.log(`Result is ${res}`);
+    })(4,5);
+
+    //short code using arrow function
+    (msg=>console.log("Hello IIFE"))()
+
+    //Promisees - 
+
+    let promise=new Promise(function (resolve, reject){
+      let age=95;
+      if(age>=18){
+        resolve("valid age");
+      }
+      else{
+        reject("wait for next year")
+      }
+
+    });
+    promise
+    .then(msg=>console.log(msg))
+    .catch(error=>console.log(error));
+    // console.log(promise);
+
+    //asunc await.........  
+    //https://dummyjson.com/products
+    async function userData(){
+      let response = await fetch ('https://dummyjson.com/products');
+      let responseData = await response.json();
+      console.log(responseData);
+    }
+    userData();
+    //error handling using try catch
+
+    //Local Storage- localStorage is a web browser feature allowing JavaScript to store key-value pairs persistently, even after closing the tab or browser. It provides around 5MB of storage, specifically for client-side data like user preferences, themes, or application state, without server interaction. Data is stored as strings and requires JSON serialization for objects. 
+
+    let myInfo={
+      name:"vineet",
+      age:19,
+      mob:758299270,
+      eMail:"vineet1234@gmail.com"
+
+    }
+    // convert the object into JSON string
+    let myInfoData=JSON.stringify(myInfo);
+    //set data
+    localStorage.setItem('preference',myInfoData);
+    //Retrieving and parsing the object back
+    let getMyInfoloData=localStorage.getItem('preference');
+    const finalData= JSON.parse(getMyInfoloData);
+    console.log(finalData.name);
+
+    // Higher Order Function:
+    let num=[3,45,64,3,5,7,2,8];
+    //find the squar of the num
+    let result=num.map(n=>n*n);
+    console.log(`Square of num iis ${result}`);
+    //find the number greater than 3
+    let result2=num.filter(n=>n>3);
+    console.log(`Sorting of num array is ${result2}`);
+    //find sum of num array
+    let sum=num.resuce((total,n)=>total+n);
+    console.log(`Addition of num array elements is ${sum}`);
+    //find double of each elements of num array
+    let double=num.forEach((n)=>console.log(3n*2);
+  </script>
+</body>
+</html>

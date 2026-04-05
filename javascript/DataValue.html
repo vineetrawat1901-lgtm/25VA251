@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Primitive : single value (immutable)
+    // string / number / boolean / null / undefined / symbol / BigInt
+    let name= "Abhay";
+    console.log(name);
+    console.log(typeof (name));
+    let age = 23;
+     console.log(age);
+    console.log(typeof (age));
+    let isMarried=false;
+     console.log(isMarried);
+    console.log(typeof (isMarried));
+    let address =null
+     console.log(address);
+    console.log(typeof(address));
+    let education;
+     console.log(education);
+    console.log(typeof (education));
+
+    // BigInt 
+    let salary = BigInt(9879779070767689);
+    console.log(salary);
+    //Symbol
+    let name1=Symbol("Vikas");
+    let name2= Symbol("Vikas");
+    console.log(name1==name2);
+    // Non-Primitive/ Reference/ Object : mutable values 
+// Object / array / function
+let student = {name: "Vikas", 
+age:23,
+isMarried:true,
+address:{
+area: "crossing republik",
+
+},
+course:"b.tech",
+branch:"cse",
+year:2025,
+getInfo:function(){
+  return "my Education is" + student.course + " "+ student.branch + " and year is "+ student.year
+}
+
+};
+console.log(student);
+console.log(student.name);
+console.log(student.address);
+console.log(typeof (student));
+console.log(student.name + " " + student.age + " " + student.address.city);
+console.log(student.getInfo());
+console.log('age' in student);
+console.log(delete student.name);
+console.log(student);
+console.log('name' in student);
+console.log(student['isMarried']);
+
+  </script>
+</body>
+</html>
